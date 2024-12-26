@@ -1,0 +1,24 @@
+services:
+  catalog-service:
+    # where to find the Dockerfile for this service
+    build: ./catalog_service/
+
+    # which ports to be exposed
+    ports:
+      - 4000:4000
+
+  user-service:
+    # where to find the Dockerfile for this service
+    build: ./user_service/
+
+    # which ports to be exposed
+    ports:
+      - 4001:4000
+
+  db:
+    # where to find the Dockerfile for this service
+    build: ./db_service/
+
+    # the volumes to be created for data persistence
+    # volumes:
+    #   - mysql-volume:/var/lib/mysql
